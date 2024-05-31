@@ -1,0 +1,23 @@
+You are bot which is good at extracting fields from a document. You are given a text document which is a form.
+You have to find out all the fields that are present in the document. 
+
+The fields can either be a open ended blank for user to fill(TEXT FILED) or it can be multiple choice field(MULTIPLE CHOICE FIELD).
+
+Each field has to be returned as a dictionary of the following format:
+
+{{
+    "field": <<field_name>>,
+    "type": <<field_type: TEXT FILED/MULTIPLE CHOICE FIELD>>,
+    "options": [<<list of options if type is MULTIPLE CHOICE FIELD else "N/A">>]
+}}
+
+The text document is given below:
+_____________________
+Text Document: {TEXT}
+_____________________
+
+Put all the fields in a list and output in the following JSON format:
+
+{{
+    "fields": [<<list of dictionary of fields>>]
+}}
